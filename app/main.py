@@ -29,7 +29,7 @@ def main():
         if n > 300:
             logging.error("retry limit exceeded")
             sys.exit(1) # Exit with a non-zero status code to indicate failure
-        print(f"Retrying in {n} seconds...")
+        logging.info(f"Retrying in {n} seconds...")
         time.sleep(n)
         n*=2
 
