@@ -39,6 +39,9 @@ def main():
     #if not found, create
     if not client.get_gateway(gw): 
         client.create_gateway(gw)
+        logging.info(f"Created Gateway D2CE19FFFEC9D449")
+    else:
+        logging.info(f"Gateway D2CE19FFFEC9D449 already exist")
     return
 
 if __name__ == "__main__":
