@@ -24,7 +24,9 @@ def main():
 
     gw = Gateway(name="wes-gateway", gateway_id="D2CE19FFFEC9D449", tenant_id="52f14cd4-c6f1-4fbd-8f87-4025e1d49242")
 
-    client.create_gateway(gw)
+    if not client.get_gateway(gw): #if not found, create
+        client.create_gateway(gw)
+    return
 
 if __name__ == "__main__":
     main() 
