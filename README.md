@@ -1,2 +1,2 @@
 # init-chirpstack-server
-docker image for init chirpstack server job
+This is a simple docker image for running a init script for `wes-chirpstack-server`
