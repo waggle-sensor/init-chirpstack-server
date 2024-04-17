@@ -22,6 +22,13 @@ def main():
     )
     args = parser.parse_args()
 
+    #configure logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(message)s",
+        datefmt="%Y/%m/%d %H:%M:%S",
+    )
+
     #Create client
     client = ChirpstackClient(args.chirpstack_account_email,args.chirpstack_account_password,args.chirpstack_api_interface,False)
     n = 10
